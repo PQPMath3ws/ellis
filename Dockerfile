@@ -1,4 +1,5 @@
-FROM python:3.11-slim-bullseye
+ARG VARIANT=3.13.4-alpine3.22
+FROM python:${VARIANT}
 
 WORKDIR /app
 

@@ -1,0 +1,14 @@
+services:
+  imersao-alura-devops-ellis:
+    container_name: imersao-alura-devops-ellis
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - imersao-alura-devops-ellis-data:/app
+
+volumes:
+  imersao-alura-devops-ellis-data:
