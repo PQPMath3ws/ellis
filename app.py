@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from database import engine, Base
+from routers.index import index_router
 from routers.alunos import alunos_router
 from routers.cursos import cursos_router
 from routers.matriculas import matriculas_router
@@ -17,6 +18,7 @@ app = FastAPI(
     version="1.0.0",
 )
 
+app.include_router(index_router, tags=["index"])
 app.include_router(alunos_router, tags=["alunos"])
 app.include_router(cursos_router, tags=["cursos"])
 app.include_router(matriculas_router, tags=["matriculas"])
