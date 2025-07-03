@@ -1,0 +1,8 @@
+.github/
+.qodo/
+.git/
+readme.md
+Dockerfile
+docker-compose.yml
+.gitignore
+__pycache__
